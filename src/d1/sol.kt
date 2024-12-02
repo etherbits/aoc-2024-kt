@@ -42,7 +42,7 @@ fun p2() {
         mults[rNum] = mults.getOrDefault(rNum, 0) + 1
     }
 
-    val score = lNums.fold(0, {acc, num -> acc + num * mults.getOrDefault(num, 0)})
+    val score = lNums.fold(0) { acc, num -> acc + num * mults.getOrDefault(num, 0) }
 
     println(score)
 }
